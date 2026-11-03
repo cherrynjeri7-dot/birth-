@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Bestie Quiz 👑</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 min-h-screen text-white font-sans flex flex-col items-center justify-between p-4 overflow-x-hidden">
+
+    <!-- QUIZ CONTAINER -->
+    <div id="quiz-container" class="w-full max-w-xl bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-3xl shadow-2xl mt-8 text-center relative z-10">
+        <!-- Header -->
+        <div class="mb-6">
+            <span id="question-tracker" class="text-xs uppercase tracking-widest text-pink-300 font-bold">Question 1 of 10</span>
+            <h1 id="question-text" class="text-2xl font-bold mt-2 text-pink-100">Loading Question...</h1>
+        </div>
+
+        <!-- Multiple Choice Options -->
+        <div id="options-container" class="space-y-3 mb-6">
+            <!-- Buttons dynamically inserted here -->
+        </div>
+
+        <!-- Feedback Message -->
+        <div id="feedback-msg" class="h-8 text-lg font-bold transition-all duration-300"></div>
+    </div>
+
+    <!-- GRAND RAPUNZEL MAGICAL FINALE (Hidden initially) -->
+    <div id="finale-container" class="hidden fixed inset-0 w-full h-full bg-slate-950 flex flex-col items-center justify-center p-4 text-center z-50 overflow-hidden">
+        
+        <!-- Floating Rapunzel Lanterns in Background -->
+        <div class="lanterns-container absolute inset-0 pointer-events-none">
+            <div class="lantern l1">🏮</div>
+            <div class="lantern l2">🏮</div>
+            <div class="lantern l3">🏮</div>
+            <div class="lantern l4">🏮</div>
+            <div class="lantern l5">🏮</div>
+        </div>
+
+        <!-- Animated Rapunzel Glowing Sundrop Flower -->
+        <div class="flower-box mb-4 relative z-10">
+            <div class="glowing-flower animate-pulse text-7xl">🌸✨</div>
+        </div>
+
+        <!-- Cute Kitten Holding Birthday Cake -->
+        <div class="kitten-box relative z-10 mb-4 animate-bounce">
+            <div class="text-8xl">🐱🎂</div>
+        </div>
+
+        <!-- Personal Cake Greeting for Sarah -->
+        <div class="bg-white/10 backdrop-blur-md border-2 border-pink-400 p-6 rounded-3xl shadow-2xl max-w-md z-10">
+            <h2 class="text-3xl font-extrabold text-pink-300 mb-2">Happy Birthday!</h2>
+            <h1 class="text-2xl md:text-3xl font-black text-yellow-300 tracking-wide mb-4">Sarah Nyambura Mungai 👑✨</h1>
+            <p class="text-pink-100 text-sm leading-relaxed">
+                You survived the ultimate friendship quiz! May your year be as bright and magical as a sky full of floating lanterns. 💖
+            </p>
+        </div>
+
+        <button onclick="restartQuiz()" class="mt-6 z-10 bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">
+            Play Again 🔄
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-xs text-pink-300/60 my-4 z-10">
+        Made with ❤️ specifically for Sarah
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
